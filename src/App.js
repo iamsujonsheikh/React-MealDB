@@ -5,6 +5,7 @@ import Home from './Components/Home'
 import About from './Components/About';
 import Meal from './Components/Meal';
 import Footer from './Shared/Footer';
+import NotFound from './Components/NotFound';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='/home' element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/meal' element={<Meal/>} />
+          <Route path='*' element={<NotFound/>} />
       </Routes>
       <Footer/>
     </div>

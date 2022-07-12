@@ -33,11 +33,13 @@ const Header = () => {
 
             {/* Mobile Nav section */}
 
-        <ul className={(!open) ? 'hidden' : 'absolute top-16 left-0 w-full px-10 bg-slate-600 text-slate-200 text-center text-xl py-6'}>
+        <ul className={(!open) ? 'hidden' : 'absolute top-16 left-0 w-full px-10 bg-slate-600 flex flex-col text-slate-200 text-center text-xl py-6'}>
 
-            <li className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Home</li>
-            <li className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>About</li>
-            <li className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Meal</li>
+            <Link to='/' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Home</Link>
+
+            <Link to='/about' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>About</Link>
+
+            <Link to='/meal' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Meal</Link>
         </ul>
 
         </div>
