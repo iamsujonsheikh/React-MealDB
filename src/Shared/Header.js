@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {AiOutlineMenuUnfold,AiOutlineClose} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import CustomLink from './CustomLink'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -16,11 +17,11 @@ const Header = () => {
 
         {/* Desktop Nav section */}
         <ul className='hidden md:flex space-x-4 text-slate-200 font-semibold'>
-            <Link to='/home' className='cursor-pointer hover:text-purple-200 duration-300'>Home</Link>
+            <CustomLink to='/home' className='cursor-pointer hover:text-purple-200 duration-300'>Home</CustomLink>
 
-            <Link to='/about' className='cursor-pointer hover:text-purple-200 duration-300'>About</Link>
+            <CustomLink to='/about' className='cursor-pointer hover:text-purple-200 duration-300'>About</CustomLink>
 
-            <Link to='/meal' className='cursor-pointer hover:text-purple-200 duration-300'>Meal</Link>
+            <CustomLink to='/meal' className='cursor-pointer hover:text-purple-200 duration-300'>Meal</CustomLink>
         </ul>
 
 
@@ -35,11 +36,11 @@ const Header = () => {
 
         <ul className={(!open) ? 'hidden' : 'absolute top-16 left-0 w-full px-10 bg-slate-600 flex flex-col text-slate-200 text-center text-xl py-6'}>
 
-            <Link to='/' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Home</Link>
+            <CustomLink to='/' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Home</CustomLink>
 
-            <Link to='/about' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>About</Link>
+            <CustomLink to='/about' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>About</CustomLink>
 
-            <Link to='/meal' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Meal</Link>
+            <CustomLink to='/meal' className='cursor-pointer hover:text-purple-200 duration-300 border-b py-1'>Meal</CustomLink>
         </ul>
 
         </div>
